@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="template" client="site">
+    <name>templStandart</name>
+    <version>24.1</version>
+    <creationDate>May 2022</creationDate>
+    <author>КАУ ДПО «АИЦТиОКО имени О.Р. Львова».</author>
+    <authorEmail/>
+    <copyright/>
+    <description>Стандартная тема (шаблон) для сайтов любой направленности. Тема (шаблон), позволяющая настраивать дизайн сайта по своему усмотрению в соотвеnствии с направлением образования.</description>
+	<updateservers>
+	   <server type="extension" name="templStandart_Updates" priority="2">http://template.edu22.info/update-tempjoomla.xml</server>
+	</updateservers>
+    <files>
+        <folder>bvi</folder>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>language</folder>
+        <folder>library</folder>
+        <folder>scripts</folder>
+        <folder>views</folder>
+        <file>component.php</file>
+        <file>error.php</file>
+        <file>footer.php</file>
+        <file>functions.php</file>
+        <file>header.php</file>
+        <file>index.php</file>
+        <file>styles.php</file>
+        <file>template.json</file>
+        <file>templateDetails.xml</file>
+        <file>template_preview.png</file>
+        <file>template_thumbnail.png</file>
+    </files>
+    <positions>
+        <position>topmenuleft</position>
+        <position>topmenuright</position>
+        <position>hmenu</position>
+        <position>pageslider</position>
+        <position>breadcrumb</position>
+        <position>imeny</position>
+        <position>banner-top</position>
+        <position>top1</position>
+        <position>top2</position>
+        <position>top3</position>
+        <position>main-top</position>
+        <position>main-t1</position>
+        <position>main-t2</position>
+        <position>main-b1</position>
+        <position>main-b2</position>
+        <position>main-bottom</position>
+        <position>bottom1</position>
+        <position>bottom2</position>
+        <position>bottom3</position>
+        <position>banner-bottom</position>
+        <position>slidebanner</position>
+        <position>footer1</position>
+        <position>footer2</position>
+        <position>footer3</position>
+        <position>bottomfooter</position>
+        <position>copyright</position>
+        <position>debug</position>
+        <position>position-sidebar</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_templstandart.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="logoFile" type="media" default="" label="TPL_LOGO_LABEL" description="TPL_LOGO_DESC"/>
+                <field name="logoLink" default="#" type="text" label="TPL_LOGOLINK_LABEL" description="TPL_LOGOLINK_DESC"/>
+                <field name="logoWidth" type="number" label="TPL_LOGO_WIDTH_LABEL" description="TPL_LOGO_WIDTH_DESC" filter="integer"/>
+                <field name="logoHeight" type="number" label="TPL_LOGO_HEIGHT_LABEL" description="TPL_LOGO_HEIGHT_DESC" filter="integer"/>
+              	<field name="siteSlogan" type="text" default="Муниципальное бюджетное общеобразовательно учреждение" size="50" label="Тип организации" description=""/>
+                <field name="siteTitle" type="text" default="Средняя общеобразовательная школа № ***" label="TPL_SITE_TITLE" description="TPL_SITE_TITLE_DESCRIPTION" filter="string"/>
+              	<field name="adress" type="textarea" rows="3" cols="25" default="" filter="raw" label="Адресс" description="Укажите местонахождение организации" />
+
+				<field name="phone" type="textarea" rows="3" cols="20" default="" filter="raw" label="Телефон" description="Телефон организации для связи" />
+
+				<field name="mail" type="text" default="" filter="string" label="E-mail" description="Адрес электронной почты организации" />
+				<field name="siteCopy" type="text" size="50" label="Подпись в подвале сайта" description=""/>
+                <field name="nicepagetheme" type="hidden" default="1"/>
+                <field name="jquery" type="checkbox" label="TPL_JQUERY_LABEL" text="TPL_JQUERY_TEXT" default="0"/>
+            </fieldset>
+          <fieldset name="advanced">
+            	<field name="templateImage" type="media" default="/templates/templstandart/images/hed-fon.jpg" label="Изображение в шапке сайта" description="Загрузите изображение, которое будет отображаться в шапке сайта (минимальная ширина изображения 1500px), либо оставьте поле пустым." />
+				<field name="templateColor" type="color" label="Основная цветовая гамма сайта"	description="Для того, чтобы поменять цвет сайта, нужно выбрать цвет и сохранить изменения в шаблоне." 	default="#0a75a0" />
+            <field name="templateakcentColor" type="color" label="Акцентный цвет сайта"	description="Укажите цвет, которым будет окрашены акцентные элементы сайта, а так же цвет окрашивания элементов при наведении." 	default="#055879" />
+         
+            <field name="usercss" type="textarea" rows="10" cols="25" default="" filter="raw" label="Пользовательский CSS" description="" />
+            
+			</fieldset>
+            <fieldset name="seo">
+                <field name="metatags" type="checkbox" label="TPL_METATAGS_LABEL" text="TPL_METATAGS_TEXT" default="1"/>
+                <field name="jsonld" type="checkbox" label="TPL_JSONLD_LABEL" text="TPL_JSONLD_TEXT" default="1"/>
+            </fieldset>
+            <fieldset name="templates">
+                <field name="blog" type="list" default="blog_1" label="TPL_BLOG_TEMPLATES_LABEL" description="TPL_BLOG_TEMPLATES_DESC">
+                    <option value="blog_1">Blog Template (default)</option>
+                </field>
+                <field name="post" type="list" default="post_1" label="TPL_POST_TEMPLATES_LABEL" description="TPL_POST_TEMPLATES_DESC">
+                    <option value="post_1">Post Template (default)</option>
+                </field>
+                <field name="login" type="list" default="login_1" label="TPL_LOGIN_TEMPLATES_LABEL" description="TPL_LOGIN_TEMPLATES_DESC">
+                    <option value="login_1">Login Template (default)</option>
+                </field>
+                <field name="page404" type="list" default="error_1" label="TPL_PAGE404_TEMPLATES_LABEL" description="TPL_PAGE404_TEMPLATES_DESC">
+                    <option value="error_1">404 Not Found Template (default)</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
